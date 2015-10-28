@@ -44,8 +44,8 @@ syn match renpyEscape +\\['"%]+ contained
 syn match renpyEscape +{/\?[ibsu]}+ contained
 syn match renpyEscape +{/\?plain}+ contained
 syn match renpyEscape +{\(p\|fast\|nw\|w\)}+ contained
-syn match renpyEscape +{\(font\|a\|color\|w\)=[^}]*}+ contained
-syn match renpyEscape +{/\(font\|a\|color\|w\)}+ contained
+syn match renpyEscape +{\(font\|a\|color\|w\|p\|size\)=[^}]*}+ contained
+syn match renpyEscape +{/\(font\|a\|color\|w\|size\)}+ contained
 syn match renpyEscape +{/\?=[^}]*}+ contained
 syn match renpyEscape +{{+ contained
 
@@ -53,8 +53,8 @@ syn match renpyEscape +{{+ contained
 syn match pythonEscape +{/\?[ibsu]}+ contained
 syn match pythonEscape +{/\?plain}+ contained
 syn match pythonEscape +{\(p\|fast\|nw\|w\)}+ contained
-syn match pythonEscape +{\(font\|a\|color\|w\)=[^}]*}+ contained
-syn match pythonEscape +{/\(font\|a\|color\|w\)}+ contained
+syn match pythonEscape +{\(font\|a\|color\|w\|p\|size\)=[^}]*}+ contained
+syn match pythonEscape +{/\(font\|a\|color\|w\|size\)}+ contained
 syn match pythonEscape +{/\?=[^}]*}+ contained
 syn match pythonEscape +{{+ contained
 
@@ -81,7 +81,7 @@ syn keyword renpyStatement menu return
 syn match renpyStatementCall /^\s*call/ skipwhite nextgroup=renpyStatementCallFrom,renpyIdentifier
 syn keyword renpyStatementCallFrom from skipwhite nextgroup=renpyIdentifier
 
-syn keyword renpyStatement if elif else
+syn keyword renpyStatement if elif else while
 """ Sound Voice & Music
 syn keyword renpyStatement play stop queue
 syn keyword renpyOperator channel frames loop
